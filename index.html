@@ -9,43 +9,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-    <header id='nav-bar'>
-        <ul>
-            <li ><a href="#" class='hover_efect'> Projetos </a><li>
-        </ul>
-    </header>
-
-    <div id="landing" class="container">
-        <div class="container_img">
-            <img src="https://avatars0.githubusercontent.com/u/27221275?v=4" alt="Avatar, Felipe foto">
+    <div class="wrapper ">
+        <header id='nav-bar'>
+            <a href="#">Felipe Tiberio</a>
+            <ul>
+                <li ><a href="#" class='hover_efect'> Projetos </a><li>
+            </ul>
+        </header>
+    
+        <div id="landing" class="container">
+            <div >
+                <img src="https://avatars0.githubusercontent.com/u/27221275?v=4" alt="Avatar, Felipe foto">
+            </div>
+         
+            <section  id='sobremim'>
+                <h2 >Sobre mim</h2>
+                <p>
+                    'Proident ad qui commodo et quis quisadipisicing 'commodo fugiat nostrud aliquaaliquip amet do. 'Amet aute consequat ipsumvelit id esse dolor 
+                </p>
+            </section>
+    
+    
+            <div  id='nav-lateral'>
+                <h2>Contato</h2>
+                <lu>
+                    <li id='github'> <a href="https://github.com/FelipeTiberio" target="_blank"> Github </a></li>
+                    <li id='likedin'> <a href="https://www.linkedin.com/in/felipetiberio/" target="_blank"> Linkedin</a> </li>
+                </lu>
+            </div>   
         </div>
-     
-        <section  id='sobremim'>
-            <h2 >Sobre mim.</h2>
+    
+        <section class="container" id='tecnologias'>
+            <h2> Linguagens e Tecnilogias</h2>
             <p>
-                'Proident ad qui commodo et quis quisadipisicing 'commodo fugiat nostrud aliquaaliquip amet do. 'Amet aute consequat ipsumvelit id esse dolor 
+                Algumas que conheço, altamente estou mais focado no ecossistema do JavaScript.
+            </p>
+            <p id='icons-p'>
+    
+                <i class="fab fa-bootstrap icons"></i>
+                <i class="fab fa-css3-alt icons"></i>
+                <i class="fab fa-html5 icons"></i>
+                <i class="fab fa-js-square icons"></i>
+                <i class="fab fa-node icons"></i>
+                <i class="fab fa-react icons"></i>
+                <br/>
+                <i class="brand ">Express.js</i>
+                <i class="brand ">MongoDB</i>
+                <i class="brand ">SQL</i>
             </p>
         </section>
-
-
-        <div  id='nav-lateral'>
-            <h2>Contato</h2>
-            <lu>
-                <li id='github'> <a href="#"> Github </a></li>
-                <li id='likedin'> <a href="#"> Linkedin</a> </li>
-            </lu>
-        </div>   
     </div>
-
-    <section class="container" id='tecnologias'>
-        <h2> Linguagens e Tecnilogias</h2>
-        <p>
-            Algumas que conheço, altamente estou mais focado no ecossistema do JavaScript.
-        </p>
-    </section>
     
+    
+
+    <section id='projetos ' class="container card-list">
+        <article class="card">
+            <header>
+                <h3> Projeto 1</h3>
+            </header>
+            <img src="https://picsum.photos/300/300" alt="">
+            <ul>
+                <li><a href="#">Live</a></li>
+                <li><a href="#">Código</a></li>
+            </ul>
+            <p>Est in proident sunt minim et ipsum ipsum adipisicing qui aute ullamco ea.</p>
+        </article> 
+    </section>
     
 </body>
 </html>

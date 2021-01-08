@@ -4,6 +4,8 @@
     --color-background: #12181b;
     --color-text-color: #ffffff;
     --color-secundary: #3d9970;
+    --color-boxshadow: #000;
+
     font-weight: bolder;
 }
 
@@ -24,15 +26,21 @@ html, body, #root{
     width: 100vw;
     overflow-x: hidden;
     background: var(--color-background);
-    height: 100%;
+    min-height: 100%;
+}
+
+.wrapper {
+    height: 100vh;
 }
 
 #nav-bar{
-    margin: 1em 1.9em;
+    margin: 1.6em 7%;
     display: flex;
     align-items: flex-end;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 
 .container{
     margin: 1em 8%;
@@ -40,16 +48,16 @@ html, body, #root{
 
 /* estilo para o botao de projetos*/
 .hover_efect{
-    background: var( --color-secundary);
     color: var(--color-text-color);
-    border:none;
+    border: 1px solid var(--color-text-color);
     position:relative;
-    font-size:1.3em;
-    padding:0 2em;
+    font-size: 0.8em;
+    padding:0 1em;
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
-    border-radius: 2rem 0.3rem 2rem;
+    border-radius: 5px;
+    font-weight: normal;
   }
   .hover_efect:hover{
     background: var(--color-text-color);
@@ -72,7 +80,7 @@ html, body, #root{
     bottom:0;
   }
   .hover_efect:hover:before,.hover_efect:hover:after{
-    width:92.5%;
+    width:100%;
     transition:800ms ease all;
   }
 
@@ -88,7 +96,7 @@ html, body, #root{
 }
 
 #landing img{
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 50%;
     max-width: 15em;
@@ -99,11 +107,12 @@ html, body, #root{
     background: var(--color-secundary);
     border-radius: 2rem 0.3rem 2rem;
     font-size: 1.3em;
-    padding: 0 0.5em ;
+    padding: 0.1em 0.3em 0 0.5em ;
 }
 
 #sobremim p{
     margin-top: 0.3em;
+    font-weight: normal;
 }
 
 div#nav-lateral li{
@@ -131,8 +140,84 @@ section#tecnologias{
 section#tecnologias p{
     font-size: 0.7em;
     font-weight: normal;
+    text-align: center
 }
 
+section #icons-p{
+    margin-top: 1.6em;
+}
+
+section#tecnologias  .icons{
+    font-size: 1.8em;
+    margin-left: 0.2em;
+
+}
+
+/*Css para os cards */
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+}
+
+.card{
+    display: grid;
+    grid-template-areas:
+    " title title title title " 
+    " img img texto texto"
+    " img img texto texto"
+    " btn btn texto texto";
+    column-gap: 1em;
+    width: auto;
+    min-width: 250px;
+    padding: 1.5em;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem  0 3rem var(--color-boxshadow); /* coloquei negativo para ficar com o efeito da sabro a esqueda*/
+}
+
+
+.card h3{
+    grid-area: title;
+    margin-left: 0.3em;
+}
+
+.card img{
+    border-radius: 9px;
+    height: auto;
+    grid-area: img;
+}
+
+.card ul{
+    grid-area: btn;
+    display: flex;
+    justify-content: space-between;
+    grid-area: btn;
+    margin-top: 0.5em;
+}
+
+.card p{
+    grid-area: texto;
+}
+
+.card ul li{
+    padding: 0.1em 0.0em;
+    text-align: center;
+    border: 1px solid var(--color-text-color);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card ul li:first-child {
+ margin-right: 0.3em;
+}
+/* Fim css card*/
+
+.brand{
+    font-size: 1.4em;
+    margin-left: 0.5em;
+}
 
 a{
     text-decoration: none;
