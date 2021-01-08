@@ -1,0 +1,149 @@
+
+:root{
+    font-size: 100%;
+    --color-background: #12181b;
+    --color-text-color: #ffffff;
+    --color-secundary: #3d9970;
+    font-weight: bolder;
+}
+
+body{
+    background: var(--color-background);
+    color: var(--color-text-color);
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.5em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+html, body, #root{
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--color-background);
+    height: 100%;
+}
+
+#nav-bar{
+    margin: 1em 1.9em;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.container{
+    margin: 1em 8%;
+}
+
+/* estilo para o botao de projetos*/
+.hover_efect{
+    background: var( --color-secundary);
+    color: var(--color-text-color);
+    border:none;
+    position:relative;
+    font-size:1.3em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    border-radius: 2rem 0.3rem 2rem;
+  }
+  .hover_efect:hover{
+    background: var(--color-text-color);
+    color: var(--color-secundary);
+  }
+  .hover_efect:before,.hover_efect:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: var(--color-secundary);
+    transition:400ms ease all;
+  }
+  .hover_efect:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .hover_efect:hover:before,.hover_efect:hover:after{
+    width:92.5%;
+    transition:800ms ease all;
+  }
+
+/* fim estilo do botao projetos*/  
+
+
+#landing{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    justify-content: center;
+    gap: 3em;
+    align-self: center;
+}
+
+#landing img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 15em;
+    grid-column: 1/2;
+}
+
+#sobremim h2, #nav-lateral h2{
+    background: var(--color-secundary);
+    border-radius: 2rem 0.3rem 2rem;
+    font-size: 1.3em;
+    padding: 0 0.5em ;
+}
+
+#sobremim p{
+    margin-top: 0.3em;
+}
+
+div#nav-lateral li{
+    margin: 0.6em 0;
+    list-style: none;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.1em;
+    transition: background 0.9s;
+}
+
+div#nav-lateral li:hover{
+    background: var(--color-secundary);
+    color: ;
+}
+
+section#tecnologias{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+}
+
+section#tecnologias p{
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--color-text-color);
+}
+
+ul li{
+    list-style: none;
+}
+
+
+
+
+
