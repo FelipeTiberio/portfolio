@@ -1,11 +1,10 @@
 
 :root{
     font-size: 100%;
-    --color-background: #12181b;
+    --color-background: #17141d;
     --color-text-color: #ffffff;
-    --color-secundary: #3d9970;
+    --color-secundary: #fa8c52;
     --color-boxshadow: #000;
-
     font-weight: bolder;
 }
 
@@ -34,10 +33,10 @@ html, body, #root{
 }
 
 #nav-bar{
-    margin: 1.6em 7%;
+    margin: 1em 7%;
     display: flex;
-    align-items: flex-end;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -58,6 +57,7 @@ html, body, #root{
     outline:none;
     border-radius: 5px;
     font-weight: normal;
+    
   }
   .hover_efect:hover{
     background: var(--color-text-color);
@@ -86,7 +86,6 @@ html, body, #root{
 
 /* fim estilo do botao projetos*/  
 
-
 #landing{
     display: grid;
     grid-template-columns: auto 1fr 1fr;
@@ -105,7 +104,7 @@ html, body, #root{
 
 #sobremim h2, #nav-lateral h2{
     background: var(--color-secundary);
-    border-radius: 2rem 0.3rem 2rem;
+    border-radius: 1rem 0.3rem 1rem;
     font-size: 1.3em;
     padding: 0.1em 0.3em 0 0.5em ;
 }
@@ -115,7 +114,7 @@ html, body, #root{
     font-weight: normal;
 }
 
-div#nav-lateral li{
+nav#nav-lateral li{
     margin: 0.6em 0;
     list-style: none;
     text-align: center;
@@ -125,7 +124,7 @@ div#nav-lateral li{
     transition: background 0.9s;
 }
 
-div#nav-lateral li:hover{
+nav#nav-lateral li:hover{
     background: var(--color-secundary);
     color: ;
 }
@@ -156,9 +155,10 @@ section#tecnologias  .icons{
 /*Css para os cards */
 
 .card-list{
-    display: flex;
-    flex-direction: column;
-    padding: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    margin: 2em;
 }
 
 .card{
@@ -206,14 +206,18 @@ section#tecnologias  .icons{
     text-align: center;
     border: 1px solid var(--color-text-color);
     width: 100%;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .card ul li:first-child {
  margin-right: 0.3em;
 }
-/* Fim css card*/
 
+.card li:hover{
+    background: var(--color-secundary);
+}
+
+/* Fim css card*/
 .brand{
     font-size: 1.4em;
     margin-left: 0.5em;
@@ -229,6 +233,12 @@ ul li{
 }
 
 
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+    
+}
 
-
+@media (max-width: 768px) {
+	
+}
 
