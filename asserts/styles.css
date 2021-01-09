@@ -285,3 +285,24 @@ ul li{
     }
 }
 
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
+
+    .card-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        margin: 0.7em;
+    }
+
+    
+    .card{
+        grid-template-areas:
+    " title title title  " 
+    " img  texto texto "
+    " img  texto texto "
+    " btn  texto texto ";
+    }   
+}
+
