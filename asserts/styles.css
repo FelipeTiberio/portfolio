@@ -40,6 +40,9 @@ html, body, #root{
     justify-content: space-between;
 }
 
+#nav-bar h2{
+    white-space: nowrap;
+}
 
 .container{
     margin: 1em 8%;
@@ -57,12 +60,15 @@ html, body, #root{
     outline:none;
     border-radius: 5px;
     font-weight: normal;
+    display: inline-block;
     
   }
+
   .hover_efect:hover{
     background: var(--color-text-color);
     color: var(--color-secundary);
   }
+
   .hover_efect:before,.hover_efect:after{
     content:'';
     position:absolute;
@@ -73,6 +79,7 @@ html, body, #root{
     background: var(--color-secundary);
     transition:400ms ease all;
   }
+
   .hover_efect:after{
     right:inherit;
     top:inherit;
@@ -88,7 +95,7 @@ html, body, #root{
 
 #landing{
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: 3em;
     align-self: center;
@@ -100,6 +107,7 @@ html, body, #root{
     border-radius: 50%;
     max-width: 15em;
     grid-column: 1/2;
+    min-width: 7em;
 }
 
 #sobremim h2, #nav-lateral h2{
@@ -152,6 +160,23 @@ section#tecnologias  .icons{
 
 }
 
+/* scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secundary);
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#786b94, 20px,#17141d 0,#17141d);
+}
+
 /*Css para os cards */
 
 .card-list{
@@ -176,7 +201,6 @@ section#tecnologias  .icons{
     background: #17141d;
     box-shadow: -1rem  0 3rem var(--color-boxshadow); /* coloquei negativo para ficar com o efeito da sabro a esqueda*/
 }
-
 
 .card h3{
     grid-area: title;
@@ -232,13 +256,62 @@ ul li{
     list-style: none;
 }
 
-
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
     
 }
 
 @media (max-width: 768px) {
-	
+
+    #landing{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container_img{
+        display: grid;
+        place-items: center;
+    }
+
+    .card-list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20em;
+    }
+
+    #nav-bar h2{
+        font-size: 1.3em;
+    }
+
+    #nav-bar a{
+        font-size: 0.7em;
+    }
+
+    #tecnologias h2{
+        white-space: nowrap;
+        font-size: 1.2em;
+    }
+
+    #tecnologias h2{
+        font-size: 1em;
+    }
+
+    .brand{
+        font-size: 1.3em;
+    }
+
+    .card{
+        display: grid;
+        grid-template-areas:
+        " title title title title " 
+        " img img img img "
+        " img img img img "
+        " texto texto texto texto"
+        " btn btn btn btn";
+    }
+
+    .card img{
+        width: 100%;
+    }
 }
 
