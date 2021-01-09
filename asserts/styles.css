@@ -121,6 +121,8 @@ html, body, #root{
 #sobremim p{
     margin-top: 0.3em;
     font-weight: normal;
+    justify-content: left;
+    text-align: left;
 }
 
 nav#nav-lateral li{
@@ -246,7 +248,7 @@ section#tecnologias  .icons{
 }
 
 .card li:hover{
-    background: var(--color-secundary);
+    /*@TODO*/
 }
 
 .card:hover {
@@ -278,12 +280,18 @@ ul li{
     list-style: none;
 }
 
+
+
 /* Desktop screen Sizes */
 @media only screen and (min-width: 850px) {
     
 }
 
 @media (max-width: 768px) {
+
+    body{
+        font-size: 90%;
+    }
 
     #landing{
         display: flex;
@@ -301,14 +309,7 @@ ul li{
         margin-top: 20em;
     }
 
-    #nav-bar h2{
-        font-size: 1.3em;
-    }
-
-    #nav-bar a{
-        font-size: 0.7em;
-    }
-
+   
     #tecnologias h2{
         white-space: nowrap;
         font-size: 1.2em;
@@ -330,6 +331,7 @@ ul li{
         " img img img img "
         " texto texto texto texto"
         " btn btn btn btn";
+        padding: 1em;
     }
 
     .card img{
@@ -338,6 +340,10 @@ ul li{
 
     .card p{
         padding: 1em 0;
+    }
+
+    .card-list{
+        margin-top: 5em;
     }
 }
 
