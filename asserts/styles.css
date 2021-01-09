@@ -195,7 +195,8 @@ section#tecnologias  .icons{
 }
 
 .card li:hover{
-    /*@TODO*/
+    border: 2.5px solid var(--color-secundary);
+
 }
 
 .gradient_text:hover {
@@ -282,6 +283,5 @@ ul li{
     .wrapper {
         height: 100%;
     }
-    
 }
 
