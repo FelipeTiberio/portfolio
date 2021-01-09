@@ -29,7 +29,9 @@ html, body, #root{
 }
 
 .wrapper {
-    height: 100vh;
+    height: 100%;
+    min-height: -webkit-fill-available;
+    margin-bottom: 2em;
 }
 
 #nav-bar{
@@ -38,60 +40,13 @@ html, body, #root{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-#nav-bar h2{
     white-space: nowrap;
+    font-size: 70%;
 }
 
 .container{
-    margin: 1em 8%;
+    margin: 1em 8%; 
 }
-
-/* estilo para o botao de projetos*/
-.hover_efect{
-    color: var(--color-text-color);
-    border: 1px solid var(--color-text-color);
-    position:relative;
-    font-size: 0.8em;
-    padding:0 1em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-    border-radius: 5px;
-    font-weight: normal;
-    display: inline-block;
-    
-  }
-
-  .hover_efect:hover{
-    background: var(--color-text-color);
-    color: var(--color-secundary);
-  }
-
-  .hover_efect:before,.hover_efect:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: var(--color-secundary);
-    transition:400ms ease all;
-  }
-
-  .hover_efect:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .hover_efect:hover:before,.hover_efect:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
-
-/* fim estilo do botao projetos*/  
 
 #landing{
     display: grid;
@@ -108,13 +63,13 @@ html, body, #root{
     max-width: 15em;
     grid-column: 1/2;
     min-width: 7em;
-    filter: grayscale(60%);
+    filter: grayscale(20%);
 }
 
 #sobremim h2, #nav-lateral h2{
     background: var(--color-secundary);
     border-radius: 1rem 0.3rem 1rem;
-    font-size: 1.3em;
+    font-size: 1em;
     padding: 0.1em 0.3em 0 0.5em ;
 }
 
@@ -133,11 +88,6 @@ nav#nav-lateral li{
     border-radius: 5px;
     padding: 0.1em;
     transition: background 0.9s;
-}
-
-nav#nav-lateral li:hover{
-    background: var(--color-secundary);
-    color: ;
 }
 
 section#tecnologias{
@@ -181,12 +131,11 @@ section#tecnologias  .icons{
 }
 
 /*Css para os cards */
-
 .card-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-    margin: 2em;
+    margin: 0.7em;
 }
 
 .card{
@@ -203,7 +152,6 @@ section#tecnologias  .icons{
     border-radius: 16px;
     background: #17141d;
     box-shadow: -1rem  0 3rem var(--color-boxshadow); /* coloquei negativo para ficar com o efeito da sabro a esqueda*/
-    overflow: visible;
 }
 
 .card h3{
@@ -251,12 +199,11 @@ section#tecnologias  .icons{
     /*@TODO*/
 }
 
-.card:hover {
+.gradient_text:hover {
     background: linear-gradient(90deg,#ff8a00,#e52e71);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
 }
 
 /* Css para animação das cartas*/
@@ -280,13 +227,6 @@ ul li{
     list-style: none;
 }
 
-
-
-/* Desktop screen Sizes */
-@media only screen and (min-width: 850px) {
-    
-}
-
 @media (max-width: 768px) {
 
     body{
@@ -306,10 +246,8 @@ ul li{
     .card-list{
         display: flex;
         flex-direction: column;
-        margin-top: 20em;
     }
 
-   
     #tecnologias h2{
         white-space: nowrap;
         font-size: 1.2em;
@@ -340,10 +278,11 @@ ul li{
 
     .card p{
         padding: 1em 0;
+    }  
+    
+    .wrapper {
+        height: 100%;
     }
-
-    .card-list{
-        margin-top: 5em;
-    }
+    
 }
 
