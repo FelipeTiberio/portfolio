@@ -108,6 +108,7 @@ html, body, #root{
     max-width: 15em;
     grid-column: 1/2;
     min-width: 7em;
+    filter: grayscale(60%);
 }
 
 #sobremim h2, #nav-lateral h2{
@@ -182,17 +183,17 @@ section#tecnologias  .icons{
 .card-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
+    gap: 1em;
     margin: 2em;
 }
 
 .card{
     display: grid;
     grid-template-areas:
-    " title title title title " 
-    " img img texto texto"
-    " img img texto texto"
-    " btn btn texto texto";
+    " title title title  " 
+    " img  texto texto "
+    " img  texto texto "
+    " btn  texto texto ";
     column-gap: 1em;
     width: auto;
     min-width: 250px;
@@ -200,16 +201,19 @@ section#tecnologias  .icons{
     border-radius: 16px;
     background: #17141d;
     box-shadow: -1rem  0 3rem var(--color-boxshadow); /* coloquei negativo para ficar com o efeito da sabro a esqueda*/
+    overflow: visible;
 }
 
 .card h3{
     grid-area: title;
     margin-left: 0.3em;
+    white-space: nowrap;
 }
 
 .card img{
     border-radius: 9px;
     height: auto;
+    width: 100%;
     grid-area: img;
 }
 
@@ -223,6 +227,8 @@ section#tecnologias  .icons{
 
 .card p{
     grid-area: texto;
+    font-weight: normal;
+    padding-right: 1em;
 }
 
 .card ul li{
@@ -231,6 +237,8 @@ section#tecnologias  .icons{
     border: 1px solid var(--color-text-color);
     width: 100%;
     border-radius: 2px;
+    font-weight: normal;
+    font-size: 1em;
 }
 
 .card ul li:first-child {
@@ -239,6 +247,20 @@ section#tecnologias  .icons{
 
 .card li:hover{
     background: var(--color-secundary);
+}
+
+.card:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Css para animação das cartas*/
+.card:hover{
+    transform: translateY(-1rem);
+    transition: 0.8s;
 }
 
 /* Fim css card*/
@@ -257,7 +279,7 @@ ul li{
 }
 
 /* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 850px) {
     
 }
 
@@ -312,6 +334,10 @@ ul li{
 
     .card img{
         width: 100%;
+    }
+
+    .card p{
+        padding: 1em 0;
     }
 }
 
