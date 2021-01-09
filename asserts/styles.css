@@ -22,7 +22,6 @@ body{
 }
 
 html, body, #root{
-    width: 100vw;
     overflow-x: hidden;
     background: var(--color-background);
     min-height: 100%;
