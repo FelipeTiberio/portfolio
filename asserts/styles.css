@@ -12,7 +12,7 @@ body{
     background: var(--color-background);
     color: var(--color-text-color);
     font-family: 'Courier Prime', monospace;
-    font-size: 1.5em;
+    font-size: 1.3rem;
 }
 
 *{
@@ -34,32 +34,30 @@ html, body, #root{
 }
 
 #nav-bar{
-    margin: 1em 7%;
+    margin: 1rem 7%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     white-space: nowrap;
     font-size: 70%;
 }
 
 .container{
-    margin: 1em 8%; 
+    margin: 1em 7%; 
 }
 
 #landing{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.2fr 1fr 1fr;
     justify-content: center;
-    gap: 3em;
+    gap: 3rem;
     align-self: center;
 }
 
 #landing img{
-    width: 80%;
+    width: 100%;
     height: auto;
-    border-radius: 50%;
-    max-width: 15em;
+    border-radius: 60%;
+    max-width: 15rem;
     grid-column: 1/2;
     min-width: 7em;
     filter: grayscale(20%);
@@ -73,10 +71,11 @@ html, body, #root{
 }
 
 #sobremim p{
-    margin-top: 0.3em;
+    margin-top: 0.3rem;
     font-weight: normal;
     justify-content: left;
     text-align: left;
+    font-size: 1.2rem;
 }
 
 nav#nav-lateral li{
@@ -263,12 +262,6 @@ ul li{
 
     .card{
         display: grid;
-        grid-template-areas:
-        " title title title title " 
-        " img img img img "
-        " img img img img "
-        " texto texto texto texto"
-        " btn btn btn btn";
         padding: 1em;
     }
 
@@ -295,14 +288,5 @@ ul li{
         gap: 1em;
         margin: 0.7em;
     }
-
-    
-    .card{
-        grid-template-areas:
-    " title title title  " 
-    " img  texto texto "
-    " img  texto texto "
-    " btn  texto texto ";
-    }   
 }
 
